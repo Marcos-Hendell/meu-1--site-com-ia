@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Histórias para a Alma</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+    <div class="grid-container">
+        <div class="news-item" onclick="openStory('story1')">
+            <h2>Superação: O Voo da Fênix</h2>
+            <p>Depois de perder tudo, ela transformou a dor em combustível. Cada fracasso era um novo degrau, cada "não" uma oportunidade. Aos poucos, as cinzas deram lugar a um par de asas robustas, prontas para alçar o voo mais alto...</p>
+        </div>
+
+        <div class="news-item" onclick="openStory('story2')">
+            <h2>Mistério: O Relógio Que Parou o Tempo</h2>
+            <p>O antigo relógio na sala de estar não marcava as horas, ele as consumia. Quando o ponteiro parou à meia-noite, a cidade inteira mergulhou em um silêncio absoluto. Nenhum som, nenhum movimento. Apenas eu e o tic-tac da minha própria mente...</p>
+        </div>
+
+        <div class="news-item" onclick="openStory('story3')">
+            <h2>Romance: Um Café Sob a Chuva</h2>
+            <p>O café esfriava na mesa enquanto a chuva caía lá fora, mas o calor no peito era de outro tipo. Um encontro inesperado, uma troca de olhares que valia mais que mil palavras. Ali, naquele instante, o mundo se resumia a nós dois e ao som da tempestade...</p>
+        </div>
+        
+        <div class="news-item" onclick="openStory('story4')">
+            <h2>Fantasia: O Portal da Floresta Proibida</h2>
+            <p>Todos evitavam a floresta proibida, mas o brilho azul no coração da mata era irresistível. Ao tocar na luz, a árvore se transformou, revelando um portal para um reino de dragões e magia ancestral...</p>
+        </div>
+
+        <div class="news-item" onclick="openStory('story5')">
+            <h2>Motivação: A Força Interior</h2>
+            <p>O sucesso não é um destino, mas uma jornada. A verdadeira força não está nos músculos, mas na mente. Quando todos duvidavam, ele usou a voz interior como guia, provando que a maior barreira a ser quebrada é sempre a nossa própria dúvida...</p>
+        </div>
+        
+        <div class="news-item" onclick="openStory('story6')">
+            <h2>Terror: O Grito do Porão</h2>
+            <p>O porão sempre foi escuro e silencioso, até a noite em que o grito ecoou. Não era de dor, mas de uma risada sádica e insana. Eu sabia que estava sozinho em casa, mas os passos subindo as escadas me diziam o contrário...</p>
+        </div>
+    </div>
+
+    <div id="modal-container">
+        <div id="modal-content">
+            <h2 id="modal-title"></h2>
+            <p id="modal-text"></p>
+            <button id="modal-close">Fechar</button>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

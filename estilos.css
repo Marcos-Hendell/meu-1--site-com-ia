@@ -1,0 +1,128 @@
+/* Estilos para o corpo da página */
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+  background-color: #0d1117; /* Fundo escuro para efeito futurista */
+  color: #c9d1d9;
+}
+
+/* Container principal usando CSS Grid */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Estilos para os artigos de notícias */
+.news-item {
+  background-color: #161b22;
+  border: 1px solid #30363d;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  cursor: pointer; /* Indica que o elemento é clicável */
+}
+
+.news-item:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 8px 25px rgba(0, 255, 255, 0.2); /* Sombra futurista em ciano */
+  border-color: #00ffff;
+}
+
+.news-item h2 {
+  margin-top: 0;
+  font-size: 1.5rem;
+  color: #56d364; /* Cor verde para títulos */
+}
+
+.news-item p {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #8b949e;
+}
+
+/* Estilos para a janela pop-up (modal) */
+#modal-container {
+  display: none; /* Escondido por padrão */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.85); /* Fundo escuro semi-transparente */
+  backdrop-filter: blur(10px); /* Efeito de desfoque futurista */
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+#modal-content {
+  background-color: #21262d;
+  border: 2px solid #00ffff; /* Borda ciano futurista */
+  border-radius: 12px;
+  padding: 40px;
+  max-width: 80%;
+  max-height: 80%;
+  overflow-y: auto;
+  transform: scale(0.9);
+  transition: transform 0.5s ease-in-out;
+}
+
+#modal-container.show {
+    display: flex;
+    opacity: 1;
+}
+
+#modal-container.show #modal-content {
+    transform: scale(1);
+}
+
+#modal-title {
+  color: #56d364;
+  font-size: 2rem;
+  border-bottom: 2px solid #30363d;
+  padding-bottom: 10px;
+}
+
+#modal-text {
+  color: #c9d1d9;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+#modal-close {
+  background-color: #f85149;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 20px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+#modal-close:hover {
+  background-color: #ff7b72;
+}
+
+
+/* Otimização para tablets (largura máxima de 768px) */
+@media (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Otimização para telas menores e smartphones (largura máxima de 480px) */
+@media (max-width: 480px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+  }
+}
